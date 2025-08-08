@@ -1,0 +1,1 @@
+This little script is for pulling the crls down from disa so you can implement them in your crl server.
