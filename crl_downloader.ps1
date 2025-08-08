@@ -1,8 +1,8 @@
 # Define source and target directories
-$crlUrl = "http://crl.gds.disa.mil/getcrlzip?ALL+CRL+ZIP"
-$downloadPath = "C:\Path\Of\Your\Choosing\ALLCRLZIP.ZIP"
-$tempExtractFolder = "C:\Path\To\Staging\CRLTemp"
-$finalCRLFolder = "C:\Path\To\Final\StagedCRLs"
+$crlUrl = "https://crl.gds.disa.mil/getcrlzip?ALL+CRL+ZIP"
+$downloadPath = "C:\users\zrock\downloads\ALLCRLZIP.ZIP"
+$tempExtractFolder = "C:\users\zrock\downloads\CRLTemp"
+$finalCRLFolder = "C:\users\zrock\downloads\StagedCRLs"
 
 # Download ALLCRLZIP.ZIP
 $wc = New-Object System.Net.WebClient
@@ -22,5 +22,7 @@ Get-ChildItem -Path $tempExtractFolder -Filter *.crl | ForEach-Object {
 }
 
 # Optional: Clean up
-Remove-Item $tempExtractFolder -Recurse -Force
-Remove-Item $downloadPath -Force
+#Remove-Item $tempExtractFolder -Recurse -Force
+#Remove-Item $downloadPath -Force
+
+
